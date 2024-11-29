@@ -19,3 +19,39 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.page {
+  opacity: 0;
+  animation: anime 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.1s;
+  animation-timing-function: ease_in_out;
+}
+
+@-webkit-keyframes anime {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 50px;
+    opacity: 1;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
